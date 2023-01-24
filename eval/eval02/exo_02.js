@@ -1,4 +1,4 @@
-
+//
 n=prompt("donnez un nombre")
 function multiplication(n)
 {
