@@ -8,7 +8,7 @@ if (tot<=100 )
 {
     rem=0
 }
-else if ((tot>=100) &&(tot<=200) ){
+else if ((tot>=100)&&(tot<=200) ){
     rem=0.05
 }
 else if (tot>200 ){
@@ -17,16 +17,19 @@ else if (tot>200 ){
 totrem=tot-(tot*rem)
 document.write("total remisé est de"+" "+totrem+"<br><br>")
 //calcul du frais de port
- port=0
+ let port=0
 if(totrem>500)
 {
     port=0
 }
 else if (totrem<500)
 {
-    if(port>6)
-    {port=(totrem*0.02)}
-    else(port<6)
-    {port=6}   
+    
+    port=(totrem*0.02)
+     
 }
-document.write("total de la comande"+"<br>"+"(total+remise) "+totrem+" euros<br>"+"plus les frais de port de "+port+" est de "+(port+totrem)+"euros")
+if(port>6)
+    {port=(totrem*0.02)}
+    else if(port<6)
+    {port=6}   
+document.write("total de la comande"+"<br>"+"(total+remise) "+totrem+" euros<br>"+"plus les frais de port de "+port.toFixed(2)+" est de "+(port+totrem).toFixed(2)+"euros")
